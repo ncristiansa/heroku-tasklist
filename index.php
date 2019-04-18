@@ -42,7 +42,7 @@
 		$query->execute();
 		$query2 = $pdo->prepare("select * FROM tareas");
 		$query2->execute();
-		echo "<b>Cosas pendientes</b> <br>";
+		echo "<h3>Cosas pendientes</h3> <br>";
 		foreach ($query as $row) {
 			  if ($row['pendientes'] == 0) {
 				  $idprimaria = $row['id'];
@@ -50,7 +50,7 @@
 			  }
 		  }
 		echo "<br><br>";
-		echo "<b>Cosas no pendientes</b> <br>";
+		echo "<h3>Cosas no pendientes</h3> <br>";
 		foreach ($query2 as $row) {
 			if ($row['pendientes'] == 1) {
 				  $idprimaria = $row['id'];
